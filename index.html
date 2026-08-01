@@ -59,18 +59,18 @@ body {
     display: flex;
     align-items: center;
     z-index: 3;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .contact-pill {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    min-width: 180px;
+    min-width: 85px;
     height: 40px;
     padding: 0 8px 0 12px;
     border-radius: 20px;
-    background: #f4f4f4;
+    background: #fff;
     color: #111;
     font-size: 16px;
     font-weight: 700;
@@ -90,14 +90,14 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 90px;
-    height: 34px;
+    min-width: 30px;
+    height: 22px;
     padding: 0 10px;
     border-radius: 17px;
     background: #171717;
     color: #fff;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: -0.01em;
 }
 
@@ -113,8 +113,8 @@ body {
 }
 
 .avatar {
-    width: 140px;
-    height: 140px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop stop-color='%23b7baf2'/%3E%3Cstop offset='1' stop-color='%237b85d6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' rx='100' fill='url(%23g)'/%3E%3Ccircle cx='100' cy='72' r='34' fill='%23f7f7f7'/%3E%3Cpath d='M48 170c8-34 34-52 52-52s44 18 52 52' fill='%23f7f7f7'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -123,21 +123,21 @@ body {
 }
 
 .phone-pill {
-    width: min(72%, 300px);
+    width: min(72%, 170px);
     margin-top: 12px;
     padding: 6px 12px;
     border-radius: 999px;
-    background: #f0f0f1;
+    background: #fff;
     text-align: center;
     font-size: 17px;
     font-weight: 700;
     color: #141414;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
 }
 
 .sms-meta {
     margin-top: 8px;
     text-align: center;
+    padding-left: 0;
     color: #6e6e76;
     font-size: 14px;
     line-height: 1.45;
@@ -232,8 +232,8 @@ body {
 
 .messages .sms-meta {
     margin: 0 0 14px;
-    text-align: left;
-    padding-left: 4px;
+    text-align: center;
+    padding-left: 0;
 }
 </style>
 </head>
@@ -256,13 +256,14 @@ body {
     </div>
 
     <div class="messages">
-        <div class="sms-meta">문자 메시지 • SMS<br>(회요일) 오후 1:37</div>
+        <div class="sms-meta">문자 메시지 • SMS<br>(수요일) 오후 1:37</div>
 
         <div class="message other">
             <div class="bubble other">
                 [Web발신]<br>
-                [국민연금추납] <span class="phone-link">555,750원</span> 신한<br>
-                562-026-80329638 납부<br>
+                [국민연금추납] 5,557,500원 신한<br>
+                <span class="phone-link">562-026-80329638 </span> 납부 
+                <br>
                 기한:26.08.31
             </div>
         </div>
@@ -273,23 +274,20 @@ body {
                 [Web발신]<br>
                 [국민연금공단]<br>
                 안녕하세요?<br>
-                이미님의 「추납보험료 납부 신청」 결과를 알려드립니다.
-            </div>
-        </div>
-
-        <div class="message other">
-            <div class="bubble other">
-                - 납부총액: 555,750원 (분할납부의 경우, 분할이자는 별도)<br>
+                이미현님의 「추납보험료 납부 신청」 결과를 알려드립니다.<br>
+                <br>
+                <br>
+                - 납부총액: 5,557,500원 (분할납부의 경우, 분할이자는 별도)<br>
                 - 분할횟수: 1회<br>
-                - 납부방법: 고지서 납부(가상계좌 납부)
+                - 납부방법: 고지서 납부(가상계좌 납부)<br>
+                <br>
+                납부(일부납 포함) 후에는 개인의 변심이나 사정 변경 등에 따른 취소는 허용되지 않으니 유의하시기 바랍니다. 감사합니다.
+                <br>
+                <br>            
+                다음번 추납 신청시에도 입력하신 추납희망 개월수가 확인되지 않아 통화가 필요할 것 같습니다. 양해부탁드립니다.
             </div>
         </div>
 
-        <div class="message other">
-            <div class="bubble other">
-                납부(일부납 포함) 후에는 개인의 변심이나 사정 변경 등에 따른 취소는 허용되지 않으니 유의하시기 바랍니다. 감사합니다.
-            </div>
-        </div>
     </div>
 
     <div class="input-area">
