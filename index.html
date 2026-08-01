@@ -186,21 +186,19 @@ body {
     right:0;
     bottom:0;
 
-    width:100%;
-    height:56px;
-
     display:flex;
     align-items:center;
 
-    padding:8px 12px calc(8px + env(safe-area-inset-bottom));
+    padding:0 16px calc(env(safe-area-inset-bottom) + 10px);
 
-    background:rgba(248,248,248,.88);
-    backdrop-filter:blur(30px);
-    -webkit-backdrop-filter:blur(30px);
+    background:transparent;
+    border:none;
 
-    border-top:.5px solid rgba(60,60,67,.18);
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+
+    z-index:999;
 }
-
 
 .plus{
     width:30px;
@@ -304,7 +302,7 @@ body {
             <div class="contact-bar">
                 <div class="contact-pill">
                     <span class="arrow">‹</span>
-                    <span class="contact-number">556</span>
+                    <span class="contact-number">356</span>
                 </div>
             </div>
 
