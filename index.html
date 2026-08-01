@@ -13,6 +13,136 @@ content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <style>
 
+/* 메시지 기본 */
+
+.message{
+    display:flex;
+    margin-bottom:8px;
+    width:100%;
+}
+
+
+.message.me{
+    justify-content:flex-end;
+}
+
+
+.message.other{
+    justify-content:flex-start;
+}
+
+
+
+/* 상대방 회색 말풍선 */
+
+.bubble.other{
+
+    max-width:75%;
+
+    background:#e9e9eb;
+
+    color:#000;
+
+    padding:9px 14px;
+
+    border-radius:20px;
+
+    font-size:17px;
+
+    line-height:1.35;
+
+    word-break:break-word;
+
+}
+
+
+
+/* 내 파란색 말풍선 */
+
+.bubble.me{
+
+    max-width:75%;
+
+    background:#007aff;
+
+    color:white;
+
+    padding:9px 14px;
+
+    border-radius:20px;
+
+    font-size:17px;
+
+    line-height:1.35;
+
+    word-break:break-word;
+
+}
+
+
+
+/* 말풍선 꼬리 느낌 */
+
+.other .bubble{
+
+    border-bottom-left-radius:5px;
+
+}
+
+
+.me .bubble{
+
+    border-bottom-right-radius:5px;
+
+}
+
+
+
+/* 시간 표시 */
+
+.time{
+
+    font-size:11px;
+
+    color:#8e8e93;
+
+    align-self:flex-end;
+
+    margin:0 5px;
+
+}
+
+
+
+/* 읽음 표시 */
+
+.read{
+
+    font-size:12px;
+
+    color:#8e8e93;
+
+    text-align:right;
+
+    margin-top:2px;
+
+}
+
+
+
+/* 날짜 구분 */
+
+.date{
+
+    text-align:center;
+
+    font-size:12px;
+
+    color:#8e8e93;
+
+    margin:15px 0;
+
+}
 *{
     margin:0;
     padding:0;
