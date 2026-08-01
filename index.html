@@ -19,120 +19,117 @@ html, body {
     height: 100%;
     overflow: hidden;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-    background: #ededed;
+    background: #efefef;
 }
 
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 18px;
+    align-items: stretch;
+    padding: 0;
 }
 
 .app {
-    width: min(100%, 420px);
-    height: min(100%, 860px);
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background: #f4f4f4;
-    border-radius: 28px;
+    background: #f5f5f5;
     overflow: hidden;
-    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.14);
 }
 
-.top-shell {
-    position: relative;
-    padding: 24px 18px 20px;
-    background: #f4f4f4;
+.contact-bar {
+    display: flex;
+    align-items: center;
+    padding: 18px 18px 16px;
 }
 
 .contact-pill {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    min-width: 102px;
+    min-width: 130px;
     height: 56px;
-    padding: 0 18px;
+    padding: 0 20px;
     border-radius: 28px;
-    background: #202020;
+    background: #212121;
     color: #fff;
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
 .contact-pill .arrow {
-    font-size: 34px;
+    font-size: 42px;
     line-height: 1;
-    margin-right: 2px;
+    margin-right: 8px;
 }
 
 .avatar-stage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 12px;
+    padding-top: 8px;
 }
 
-.avatar{
-    width: 116px;
-    height: 116px;
+.avatar {
+    width: 122px;
+    height: 122px;
     border-radius: 50%;
-    background: linear-gradient(180deg, #9aa2d6 0%, #7984cf 100%);
-    box-shadow: inset 0 0 0 8px rgba(255,255,255,0.18);
+    background: linear-gradient(180deg, #b7baf2 0%, #7b85d6 100%);
     position: relative;
+    box-shadow: inset 0 0 0 8px rgba(255,255,255,0.18);
 }
 
 .avatar::before {
     content: "";
     position: absolute;
+    top: 20%;
     left: 50%;
-    top: 22%;
-    width: 39%;
-    height: 39%;
     transform: translateX(-50%);
+    width: 38%;
+    height: 38%;
     border-radius: 50%;
-    background: #f5f5f5;
+    background: #f7f7f7;
 }
 
 .avatar::after {
     content: "";
-    left: 50%;
-    bottom: 12%;
     position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 62%;
     height: 38%;
-    transform: translateX(-50%);
-    border-radius: 45px 45px 18px 18px;
-    background: #f5f5f5;
+    border-radius: 48px 48px 18px 18px;
+    background: #f7f7f7;
 }
 
 .phone-pill {
-    margin-top: 16px;
-    min-width: 290px;
-    padding: 12px 22px;
+    width: min(92%, 422px);
+    margin-top: 18px;
+    padding: 13px 24px;
     border-radius: 999px;
-    background: #ffffff;
-    color: #1a1a1a;
+    background: #f0f0f1;
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    color: #141414;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
 }
 
 .sms-meta {
     margin-top: 14px;
     text-align: center;
-    color: #6b6b73;
+    color: #6e6e76;
     font-size: 14px;
+    line-height: 1.5;
 }
 
 .messages {
     flex: 1;
     overflow-y: auto;
-    padding: 14px 16px 20px;
-    background: #f4f4f4;
+    padding: 18px 16px 12px;
+    background: #f5f5f5;
 }
 
 .messages::-webkit-scrollbar {
@@ -143,87 +140,51 @@ body {
     display: flex;
     align-items: flex-end;
     margin-bottom: 12px;
-    animation: messageIn .18s ease-out;
 }
 
 .message.other {
     justify-content: flex-start;
 }
 
-.message.me {
-    justify-content: flex-end;
-}
-
 .bubble {
-    max-width: 88%;
-    padding: 14px 16px;
-    border-radius: 24px;
+    max-width: 92%;
+    padding: 16px 16px;
+    border-radius: 20px;
     font-size: 17px;
-    line-height: 1.45;
+    line-height: 1.42;
     word-break: break-word;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
 }
 
 .bubble.other {
-    color: #111;
-    background: #e5e5e7;
+    color: #121212;
+    background: #e5e7eb;
     border-bottom-left-radius: 8px;
 }
 
-.bubble.me {
-    color: #fff;
-    background: #007aff;
-    border-bottom-right-radius: 8px;
-}
-
-.time {
-    align-self: flex-end;
-    font-size: 11px;
-    color: #8e8e93;
-    margin: 0 5px;
-}
-
-.read {
-    font-size: 12px;
-    color: #8e8e93;
-    text-align: right;
-    margin-top: 3px;
-}
-
-.date {
-    text-align: center;
-    color: #8e8e93;
-    font-size: 13px;
-    margin: 10px 0 18px;
-}
-
 .input-area {
-    height: 72px;
+    height: 78px;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-    background: rgba(248,248,248,0.96);
+    background: #f2f2f2;
     border-top: 1px solid #d9d9dd;
 }
 
 .plus,
-.voice,
-.back,
-.info {
+.voice {
     user-select: none;
-}
-
-.plus {
-    width: 42px;
-    height: 42px;
-    border-radius: 21px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.plus {
+    width: 38px;
+    height: 38px;
     color: #5c5c63;
-    font-size: 32px;
-    background: #f1f1f2;
+    font-size: 34px;
+    line-height: 1;
 }
 
 .input-box {
@@ -235,58 +196,42 @@ body {
     background: #fff;
     padding: 0 16px;
     font-size: 15px;
-    color: #272727;
-    box-shadow: inset 0 0 0 1px #d8d8dd;
+    color: #202020;
+    box-shadow: inset 0 0 0 1px #d9d9de;
 }
 
 .voice {
-    width: 42px;
-    height: 42px;
-    border-radius: 21px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 38px;
+    height: 38px;
     color: #5f5f63;
-    font-size: 22px;
-    background: #f1f1f2;
+    font-size: 24px;
 }
 
 .phone-link {
     color: #1680ff;
     text-decoration: none;
 }
-
-@keyframes messageIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 </style>
 </head>
 <body>
 <div class="app">
-    <div class="top-shell">
+    <div class="contact-bar">
         <div class="contact-pill">
-            <span class="arrow">‹</span>574
+            <span class="arrow">‹</span>586
         </div>
+    </div>
 
-        <div class="avatar-stage">
-            <div class="avatar"></div>
-            <div class="phone-pill">+82 2-6345-9065</div>
-            <div class="sms-meta">문자 메시지 • SMS<br>(그저께) 오후 1:37</div>
-        </div>
+    <div class="avatar-stage">
+        <div class="avatar"></div>
+        <div class="phone-pill">+82 2-6345-9065</div>
+        <div class="sms-meta">문자 메시지 • SMS<br>(회요일) 오후 1:37</div>
     </div>
 
     <div class="messages">
         <div class="message other">
             <div class="bubble other">
                 [Web발신]<br>
-                [국민연금추납] <span class="phone_link">555,750원</span> 신한<br>
+                [국민연금추납] <span class="phone-link">555,750원</span> 신한<br>
                 562-026-80329638 납부<br>
                 기한:26.08.31
             </div>
