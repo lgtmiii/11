@@ -161,12 +161,8 @@ body {
     margin-bottom: 10px;
 }
 
-.message.other {
-    justify-content: flex-start;
-}
 
 .bubble {
-    max-width: 88%;
     padding: 14px 16px;
     border-radius: 18px;
     font-size: 16px;
@@ -174,23 +170,27 @@ body {
     word-break: break-word;
 }
 
+.message.other {
+    justify-content: flex-start;
+}
+
 .bubble.other {
     color: #121212;
     background: #e5e7eb;
     border-bottom-left-radius: 7px;
+    max-width: 78%;
+    padding: 12px 14px;
 }
+
 
 .input-area {
     height: 68px;
     display: flex;
     align-items: center;
     gap: 10px;
-
+    padding: 8px 14px calc(8px + env(safe-area-inset-bottom));
     background: #f2f2f2;
     border-top: 1px solid #d9d9dd;
-    .input-area {
-    padding-bottom: calc(28px + env(safe-area-inset-bottom));
-}
 }
 
 .plus,
