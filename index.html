@@ -324,6 +324,100 @@ html,body{
 
 }
 
+/* 메시지 등장 애니메이션 */
+
+.message{
+
+    animation:
+    messageIn .18s ease-out;
+
+}
+
+
+@keyframes messageIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(10px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+
+/* 입력창 iOS 느낌 개선 */
+
+.input-box{
+
+    background:#fff;
+
+    outline:none;
+
+}
+
+
+.input-box:focus{
+
+    border-color:#007aff;
+
+}
+
+
+
+/* 스크롤바 제거 */
+
+.messages::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+
+/* 하단 영역 고정 느낌 */
+
+.input-area{
+
+    flex-shrink:0;
+
+}
+
+
+
+/* 버튼 터치 효과 */
+
+.plus,
+.voice,
+.back,
+.info{
+
+    user-select:none;
+
+}
+
+
+.plus:active,
+.voice:active,
+.back:active,
+.info:active{
+
+    opacity:.5;
+
+}
 
 </style>
 
