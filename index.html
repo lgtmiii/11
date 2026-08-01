@@ -53,10 +53,22 @@ body {
 }
 
 .contact-bar {
-    position: absolute;
-    left: 16px;
-    top: 75px;
+    position: relative;
+    display: flex;
+    align-items: center;
     z-index: 3;
+    margin-bottom: 12px;
+    transform: translateY(20px);
+}
+
+
+.avatar-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transform: translateY(60px);
 }
     
 .contact-pill {
@@ -98,14 +110,6 @@ body {
     letter-spacing: -0.01em;
 }
 
-.avatar-stage {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-    transform: translateY(40px);
-}
 .avatar {
     width: 80px;
     height: 80px;
@@ -242,7 +246,7 @@ body {
             <div class="contact-bar">
                 <div class="contact-pill">
                     <span class="arrow">‹</span>
-                    <span class="contact-number">587</span>
+                    <span class="contact-number">511</span>
                 </div>
             </div>
 
