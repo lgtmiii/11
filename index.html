@@ -431,7 +431,103 @@ html,body{
 
 
 </div>
+<script>
 
+const input = document.querySelector(".input-box");
+const messages = document.querySelector(".messages");
+
+
+// 메시지 추가 함수
+
+function addMessage(text){
+
+    if(!text.trim()) return;
+
+
+    const wrap = document.createElement("div");
+
+    wrap.className = "message me";
+
+
+    wrap.innerHTML = `
+
+        <div class="time">
+            ${getTime()}
+        </div>
+
+
+        <div>
+
+            <div class="bubble me">
+                ${text}
+            </div>
+
+            <div class="read">
+                읽음
+            </div>
+
+        </div>
+
+    `;
+
+
+    messages.appendChild(wrap);
+
+
+    scrollBottom();
+
+}
+
+
+
+// 현재 시간
+
+function getTime(){
+
+    const now = new Date();
+
+    let h = now.getHours();
+
+    let m = now.getMinutes();
+
+
+    return h + ":" + 
+    (m < 10 ? "0"+m : m);
+
+}
+
+
+
+// 자동 스크롤
+
+function scrollBottom(){
+
+    messages.scrollTop =
+    messages.scrollHeight;
+
+}
+
+
+
+// 엔터 전송
+
+input.addEventListener(
+"keydown",
+function(e){
+
+
+    if(e.key==="Enter"){
+
+        addMessage(input.value);
+
+        input.value="";
+
+    }
+
+
+});
+
+</script>
 
 </body>
 </html>
