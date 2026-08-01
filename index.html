@@ -227,7 +227,7 @@ body {
 
     height: 36px;
 
-    background: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.9) !important;
 
     border-radius: 18px;
 
@@ -235,10 +235,11 @@ body {
 
     overflow: hidden;
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
+    opacity: 1;
 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
 
 .input-box {
     width:100%;
@@ -247,13 +248,16 @@ body {
     border:none;
     outline:none;
 
-    background: rgba(255,255,255,0.9);
+    background: transparent !important;
 
     padding:0 42px 0 14px;
 
     font-size:16px;
 
     color:#000;
+
+    appearance:none;
+    -webkit-appearance:none;
 }
 
 .input-box::placeholder {
@@ -311,7 +315,7 @@ body {
             <div class="contact-bar">
                 <div class="contact-pill">
                     <span class="arrow">‹</span>
-                    <span class="contact-number">956</span>
+                    <span class="contact-number">356</span>
                 </div>
             </div>
 
